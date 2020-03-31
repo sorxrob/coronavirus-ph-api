@@ -27,6 +27,40 @@ class Scraper {
     }
   }
 
+  getFacilities() {
+    const data = []
+    return new Promise((resolve, reject) => {
+      csv()
+        .fromStream(
+          request.get(
+            'https://raw.githubusercontent.com/gigerbytes/ncov-ph-data/master/data/facilities.csv'
+          )
+        )
+        .subscribe(
+          json => {
+            data.push(json)
+          },
+          function(e) {
+            reject(e)
+          },
+          function() {
+            resolve(
+              data.map(i => {
+                const clone = { ...i }
+                delete clone.dashboard_last_updated
+                delete clone.inserted_at
+                clone.puis = +i.puis
+                clone.confirmed_cases = +i.confirmed_cases
+                clone.latitude = +i.latitude
+                clone.longitude = +i.longitude
+                return clone
+              })
+            )
+          }
+        )
+    })
+  }
+
   async getCases() {
     try {
       const count = await this.getCasesCount()

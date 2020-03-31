@@ -30,6 +30,12 @@ app.get('/cases', async (req, res) => {
   return res.json(data)
 })
 
+// Laboratory Status of Patients in the Philippines
+app.get('/facilities', async (_, res) => {
+  const data = await scrape.getFacilities()
+  return res.json(data)
+})
+
 // Confirmed cases of Filipino nationals outside the Philippines
 app.get('/cases-outside-ph', async (_, res) => {
   const data = await scrape.getCasesOutsidePh()
