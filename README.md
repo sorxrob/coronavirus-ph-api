@@ -1,3 +1,5 @@
+<a href="https://www.buymeacoffee.com/7eDr4fv" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;" ></a>
+
 # coronavirus-ph (API)
 
 > 🦠A simple and fast (< 200ms) api for tracking the coronavirus (COVID-19, SARS-CoV-2) outbreak in the Philippines.
@@ -195,10 +197,6 @@ A list of public websites that are using this API
 ## Other apps
 
 I also launched a [coronavirus tracking website](https://the2019ncov.com) and open-sourced it!
-
-## Donate
-
-<a href="https://www.buymeacoffee.com/7eDr4fv" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/lato-orange.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;" ></a>
 
 ## License & copyright
 
