@@ -211,7 +211,6 @@ class Scraper {
       .find('tbody tr')
       .each((idx, el) => {
         const td = $(el).children()
-
         formattedData[
           td
             .eq(0)
@@ -224,6 +223,7 @@ class Scraper {
           .eq(1)
           .text()
           .trim()
+          .split('(')[0]
           .replace(/\,/g, '')
       })
 
