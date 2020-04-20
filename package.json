@@ -18,6 +18,7 @@
     "cheerio-tableparser": "^1.0.1",
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
+    "dayjs": "^1.8.24",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "google-spreadsheet": "^3.0.10",
