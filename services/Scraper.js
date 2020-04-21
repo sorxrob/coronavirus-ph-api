@@ -79,7 +79,7 @@ class Scraper {
 			const dateRow = dayjs(row['Date']).format('YYYY-MM-DD');
 			const now = dayjs().format('YYYY-MM-DD');
 
-			if (dateRow === now) {
+			if (row['Cases']) {
 				result = {
 					cases: +row['Cases'],
 					deaths: +row['Deaths'],
