@@ -76,8 +76,6 @@ class Scraper {
 
 		for (let x = 0; x < reversed.length; x++) {
 			const row = reversed[x];
-			const dateRow = dayjs(row['Date']).format('YYYY-MM-DD');
-			const now = dayjs().format('YYYY-MM-DD');
 
 			if (row['Cases']) {
 				result = {
