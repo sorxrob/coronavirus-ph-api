@@ -229,7 +229,7 @@ class Scraper {
     );
     const $ = cheerio.load(res.data);
     cheerioTableparser($);
-    const rawData = $('.wikitable').eq(1).parsetable(true, true, true);
+    const rawData = $('.wikitable').eq(0).parsetable(true, true, true);
 
     const formattedData = [];
 
